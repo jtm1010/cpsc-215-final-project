@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+	<script src="js/jquery.js"></script>
+		<script type="text/javaScript">
+	$(document).on('mobileinit',function(){
+		$.mobile.defaultPageTransition ='slide';
+	)};
+	</script>
+	<script src="js/jquery.mobile-1.4.5.js"></script>
+
+        <title>Bookslist</title>
+    </head>
+    <body>
+  <div  data-role="page" id="k" data-title="Main Menu">
+	<div data-role="header">
+		<h1>List Of Books</h1>
+		</div><!--end header -->
+		<ul data-role="listview">
+    <li><a href="#bad" data-transition="slide">Bad Monkey</a></li>
+    <li><a href="#trial" data-transition="slide">The Trial</a></li>
+    <li><a href="#mercedes" data-transition="slide">Mr. Mercedes</a></li>
+    <li><a href="#godfather" data-transition="slide">The Godfather</a></li>
+    <li><a href="#red" data-transition="slide">Red Dragon</a></li>
+	<li><a href="#twinpeaks" data-transition="slide">The Secret History of Twin Peaks</a></li>
+    <li><a href="#expl" data-transition="slide">Let's Explore Diabetes With Owls </a></li>
+    <li><a href="#dome" data-transition="slide">Under The Dome</a></li>
+    <li><a href="#flowers" data-transition="slide">Flowers for Algernon</a></li>
+    <li><a href="#cuckoo" data-transition="slide">One Flew Over the Cuckoo's Nest</a></li>
+</ul>
+
+<div data-role="footer" align="center"  data-position="fixed" data-id="f" id="f">
+<a href="#k" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-top" data-transition="slide">Home</a>
+<a href="https://www.goodreads.com/" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top" data-transition="slide">More</a>
+<a href="#k" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-action ui-btn-icon-top" data-transition="slide">Back</a>
+
+	</div> <!--end footer -->
+	
+
+	
+</div>
+
+	<!-- Start of second page -->
+<div data-role="page" id="expl" >
+
+	<div data-role="header">
+	<a href="#twinpeaks" data-direction="reverse" class="ui-btn" data-transition="slide"><</a>
+	<a href="#dome" data-direction="forward" class="ui-btn" data-transition="slide">></a>
+		<h1>Let's Explore Diabtes with Owls</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<img src="images/Lets_Explore_Diabetes_With_Owls_David_Sedaris.png" height="120" width="100">
+						<p>Let's Explore Diabetes With Owls<br>by David Sedaris<br><br> A collection of short stories and essays regarding humorous<br>
+				observations of the author's life and other topics. <br> Essential reading for anyone who enjoys sharp tongue-in cheek humor </p>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" data-id="f" align="center">
+		<a href="#k" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-top" data-transition="slide">Home</a>
+		<a href="https://www.goodreads.com/" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top" data-transition="slide">More</a>
+		<a href="#k" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-action ui-btn-icon-top" data-transition="slide">Back</a>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="dome" >
+
+	<div data-role="header">
+	<a href="#expl" data-direction="reverse" class="ui-btn" data-transition="slide"><</a>
+	<a href="#flowers" data-direction="forward" class="ui-btn" data-transition="slide">></a>
+		<h1>Under The Dome</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<img src="images/220px-Under_the_Dome_Final.jpg" height="120" width="100">
+				<p>Under the Dome<br>by Stephen King <br><br> An epic tale about a small town that is being held captive beneath a large impenetrable dome.<br>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" data-id="f" align="center"><!-- footer with active buttons -->
+		<a href="#k" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-top" data-transition="slide">Home</a>
+		<a href="https://www.goodreads.com/" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top" data-transition="slide">More</a>
+		<a href="#k" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-action ui-btn-icon-top" data-transition="slide">Back</a>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+    </body>
+</html>
