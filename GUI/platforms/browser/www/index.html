@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        
+		
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+		<link rel="stylesheet" href="css/SRUTheme.css">
+		 <!-- <script type="text/javascript" src="cordova.js"></script> -->
+		<script src="js/jquery.js">
+		
+		</script>
+		<script>
+			
+			$(document).ready(function() {
+				
+				//Setup transition animations
+				$(".menu-transition-animation").attr({"data-transition" : "slidedown",
+										    "data-direction" : "reverse"});
+				$(".return-transition-animation").attr({"data-transition" : "slidedown"});
+				$(".sub-transition-animation").attr({"data-transition" : "slide"});
+				$(".sub-return-transition-animation").attr({"data-transition" : "slide",
+										    "data-direction" : "reverse"});
+				
+				
+				//shorten class via this query
+				$(".menu-btn").addClass("ui-btn ui-icon-carat-d ui-btn-icon-left");
+				$(".sub-btn").addClass("ui-btn ui-icon-carat-r ui-btn-icon-right");
+				$(".return-btn").addClass("ui-btn ui-icon-bars ui-btn-icon-right ui-btn-right");
+				$(".sub-return-btn").addClass("ui-btn ui-icon-carat-l ui-btn-icon-left ui-btn-left");
+									
+				//all footers must be fixed
+				$("div[data-role='footer']").attr("data-position","fixed");
+				
+			}); 
+		</script>
+		<script src="js/jquery.mobile-1.4.5.js"> </script>
+
+		
+		<style>
+			div.menu {
+				 height: 100%;
+			
+				 background-image : url("slipperyrockpa.jpg");
+				 background-repeat : no-repeat;
+				 background-size: cover;
+				 background-attachment: fixed;
+				 background-position: center;
+			}
+			
+			div.entertainment {
+				 height: 100%;
+			
+				 background-image : url("movies.jpg");
+				 background-repeat : no-repeat;
+				 background-size: cover;
+				 background-attachment: fixed;
+				 background-position: center;
+			}
+			
+			div.dining-menu {
+				 height: 100%;
+			
+				 background-image : url("dining-menu.jpg");
+				 background-repeat : no-repeat;
+				 background-size: cover;
+				 background-attachment: fixed;
+				 background-position: center;
+			}
+			
+			div.dining-oncampus {
+				 height: 100%;
+			
+				 background-image : url("oncampus-dining.jpg");
+				 background-repeat : no-repeat;
+				 background-size: cover;
+				 background-attachment: fixed;
+				 background-position: center;
+			}
+			
+			div.dining-offcampus {
+				 height: 100%;
+			
+				 background-image : url("offcampus-dining.jpg");
+				 background-repeat : no-repeat;
+				 background-size: cover;
+				 background-attachment: fixed;
+				 background-position: center;
+			}
+			
+			div.outdoors {
+				 height: 100%;
+			
+				 background-image : url("outdoors.jpg");
+				 background-repeat : no-repeat;
+				 background-size: cover;
+				 background-attachment: fixed;
+				 background-position: center;
+			}
+			
+			div.shopping {
+				 height: 100%;
+			
+				 background-image : url("grovecityshop.jpg");
+				 background-repeat : no-repeat;
+				 background-size: cover;
+				 background-attachment: fixed;
+				 background-position: center;
+			}
+			
+			div.place-of-interest {
+				 height: 100%;
+			
+				 background-image : url("slipperyrockpoi.jpg");
+				 background-repeat : no-repeat;
+				 background-size: cover;
+				 background-attachment: fixed;
+				 background-position: center;
+			}
+			
+		</style> 
+		</head>
+    <body>
+		
+		
+		
+	<!-- Main menu page -->
+	<div data-theme = "a" data-role="page" id="p-menu" class="menu">
+
+		<div data-role="header">
+			<h1>Welcome to Slippery Rock</h1>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+		<ul data-role = "listview">
+			<li><a href="#p-entertainment" class="menu-btn menu-transition-animation">Entertainment</a></li>
+			<li><a href="#p-eat" class="menu-btn menu-transition-animation">Eat</a></li>
+			<li><a href="#p-outdoors" class="menu-btn menu-transition-animation">Outdoors</a></li>
+			<li><a href="#p-shop" class="menu-btn menu-transition-animation">Shop</a></li>
+			<li><a href="#p-poi" class="menu-btn menu-transition-animation">Nearby Places of Interest</a></li>
+		</ul>
+		</div><!-- /content -->
+
+		<div class="ui-title" data-role="footer">
+			<h4></h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+
+	
+	
+	<!-- Entertainment Page -->
+	<div data-theme = "a" data-role="page" id="p-entertainment" class="entertainment">
+
+		<div data-role="header">
+			<a href="#p-menu" class="sub-return-btn sub-return-transition-animation">Back</a>
+			<h1>Entertainment</h1>
+			<a href="#p-menu" class="return-btn return-transition-animation">Menu</a>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			
+			<!-- generic hidden tab -->
+			<div data-role="collapsible">
+				<h4>Name of Place</h4>
+				<p>DESCRIPTION</p>
+				<p>Anything else you want to add</p>
+			</div>
+			
+			<!-- generic hidden tab -->
+			<div data-role="collapsible">
+				<h4>Name of Place</h4>
+				<p>DESCRIPTION</p>
+				<p>Anything else you want to add</p>
+			</div>
+			
+			<!-- generic hidden tab -->
+			<div data-role="collapsible">
+				<h4>Name of Place</h4>
+				<p>DESCRIPTION</p>
+				<p>Anything else you want to add</p>
+			</div>
+			
+			<!-- generic hidden tab -->
+			<div data-role="collapsible">
+				<h4>Name of Place</h4>
+				<p>DESCRIPTION</p>
+				<p>Anything else you want to add</p>
+			</div>
+			
+			<!-- generic hidden tab -->
+			<div data-role="collapsible">
+				<h4>Name of Place</h4>
+				<p>DESCRIPTION</p>
+				<p>Anything else you want to add</p>
+			</div>
+			
+		</div><!-- /content -->
+
+		<div class="ui-title" data-role="footer">
+			<h4></h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+	
+	
+	
+	<!-- Eat Page -->
+	<div data-theme = "a" data-role="page" id="p-eat" class="dining-menu">
+
+		<div data-role="header">
+			<a href="#p-menu" class="sub-return-btn sub-return-transition-animation">Back</a>
+			<h1>Where to Eat</h1>
+			<a href="#p-menu" class="return-btn return-transition-animation">Menu</a>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<ul data-role = "listview">
+			<li><a href="#p-eat-oncampus" class="sub-btn sub-transition-animation">On Campus</a></li>
+			<li><a href="#p-eat-offcampus" class="sub-btn sub-transition-animation">Off Campus</a></li>
+		</ul>
+		</div><!-- /content -->
+
+		<div class="ui-title" data-role="footer">
+			<h4></h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+	
+	
+	
+	<!-- Eat On-Campus Page -->
+	<div data-theme = "a" data-role="page" id="p-eat-oncampus" class="dining-oncampus">
+
+		<div data-role="header">
+			<a href="#p-eat" class="sub-return-btn sub-return-transition-animation">Back</a>
+			<h1>On Campus Dining</h1>
+			<a href="#p-menu" class="return-btn return-transition-animation">Menu</a>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+			<p><a href="#menu">Back to foo</a></p>
+		</div><!-- /content -->
+
+		<div class="ui-title" data-role="footer">
+			<h4></h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+	
+	
+	
+	<!-- Eat Off-Campus Page -->
+	<div data-theme = "a" data-role="page" id="p-eat-offcampus" class="dining-offcampus">
+
+		<div data-role="header">
+			<a href="#p-eat" class="sub-return-btn sub-return-transition-animation">Back</a>
+			<h1>Off Campus Dining</h1>
+			<a href="#p-menu" class="return-btn return-transition-animation">Menu</a>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+			<p><a href="#menu">Back to foo</a></p>
+		</div><!-- /content -->
+
+		<div class="ui-title" data-role="footer">
+			<h4></h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+	
+	
+	
+	<!-- Outdoors Page -->
+	<div data-theme = "a" data-role="page" id="p-outdoors" class="outdoors">
+
+		<div data-role="header">
+			<a href="#p-menu" class="sub-return-btn sub-return-transition-animation">Back</a>
+			<h1>Outdoor Activities</h1>
+			<a href="#p-menu" class="return-btn return-transition-animation">Menu</a>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+			<p><a href="#menu">Back to foo</a></p>
+		</div><!-- /content -->
+
+		<div class="ui-title" data-role="footer">
+			<h4></h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+	
+	
+	
+	<!-- Shop Page -->
+	<div data-theme = "a" data-role="page" id="p-shop" class="shopping">
+
+		<div data-role="header">
+			<a href="#p-menu" class="sub-return-btn sub-return-transition-animation">Back</a>
+			<h1>Shopping</h1>
+			<a href="#p-menu" class="return-btn return-transition-animation">Menu</a>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+			<p><a href="#menu">Back to foo</a></p>
+		</div><!-- /content -->
+
+		<div data-role="footer">
+			<h4></h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+	
+
+	
+	<!-- Place of interest Page -->
+	<div data-theme = "a" data-role="page" id="p-poi" class="place-of-interest">
+
+		<div data-role="header">
+			<a href="#p-menu" class="sub-return-btn sub-return-transition-animation">Back</a>
+			<h1>Nearby Places of Interest</h1>
+			<a href="#p-menu" class="return-btn return-transition-animation">Menu</a>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+			<p><a href="#menu">Back to foo</a></p>
+		</div><!-- /content -->
+
+		<div data-role="footer">
+			<h4></h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+</body>	
+</html>
