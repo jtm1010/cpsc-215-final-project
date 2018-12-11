@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        
+
 		
 		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
 		<link rel="stylesheet" href="css/SRUTheme.css">
-		 <!-- <script type="text/javascript" src="cordova.js"></script> -->
+
 		<script src="js/jquery.js">
 		
 		</script>
@@ -34,8 +34,12 @@
 				$("div[data-role='footer']").attr("data-position","fixed");
 				
 			}); 
+			
+
 		</script>
 		<script src="js/jquery.mobile-1.4.5.js"> </script>
+		
+
 
 		
 		<style>
@@ -120,6 +124,17 @@
 			}
 			
 		</style> 
+		<script>
+			function launchMap(url){
+		alert(url)
+		//url="www.sru.edu"
+		var ref = cordova.InAppBrowser.open(url, '_blank', 'location=yes');
+		}
+		function oncampusMap(mapTitle){
+		
+		}
+		</script>
+		<script type="text/javascript" src="cordova.js"></script> 
 		</head>
     <body>
 		
@@ -165,34 +180,52 @@
 				<h4>Name of Place</h4>
 				<p>DESCRIPTION</p>
 				<p>Anything else you want to add</p>
+				<img src="img/.jpg" alt="" style="width:100%;height:100%;"> 	
+				<button id="button" onclick="launchMap()">Launch Map</button>
+				
 			</div>
 			
 			<!-- generic hidden tab -->
 			<div data-role="collapsible">
-				<h4>Name of Place</h4>
-				<p>DESCRIPTION</p>
-				<p>Anything else you want to add</p>
+				<h4>Mihalik-Thompson Stadium Complex</h4>
+				<p>Like sports? Visit Mihalik-Thompson Stadium Complex to see many different sports teams from Slippery Rock compete. Go Rock!</p>
+				<img src="img/thompson.jpg" alt="Thompson" style="width:100%;height:100%;"> 
 			</div>
 			
 			<!-- generic hidden tab -->
 			<div data-role="collapsible">
-				<h4>Name of Place</h4>
-				<p>DESCRIPTION</p>
-				<p>Anything else you want to add</p>
+				<h4>Robert N. Aebersold Student Recreation Center (ARC)</h4>
+				<p>Like to work out or play sports? Visit the ARC! The 82,000 square foot facility has components for everyone! Including an aquatic center, rock climbing wall, and a Fitness center!</p>
+				<img src="img/arc.jpg" alt="ARC" style="width:100%;height:100%;"> 
 			</div>
 			
 			<!-- generic hidden tab -->
 			<div data-role="collapsible">
-				<h4>Name of Place</h4>
-				<p>DESCRIPTION</p>
-				<p>Anything else you want to add</p>
+				<h4>Ski Lodge/ Campground</h4>
+				<p>Want to escape from the cluttered college life but don’t have a car to go far? Why not visit the Ski Lodge / Campground? The campsites can be reserved for free by SRU students for campfires/cookouts up until 11 pm. Escape the college life for a night!</p>
+				<img src="img/ski lodge.jpg" alt="Ski Lodge" style="width:100%;height:100%;"> 
 			</div>
 			
 			<!-- generic hidden tab -->
 			<div data-role="collapsible">
-				<h4>Name of Place</h4>
-				<p>DESCRIPTION</p>
-				<p>Anything else you want to add</p>
+				<h4>Heinz Field</h4>
+				<p>If you like to watch football, why don’t you stop in and see the Steelers play. Heinz Field is home to the Steelers, and the Pittsburgh Panthers. Stop at the Clark Bar and Grill for something to eat!</p>
+				<img src="img/heinz field.jpg" alt="Heinz Field" style="width:100%;height:100%;"> 
+				<button id="button" onclick="launchMap('https://www.google.com/maps/search/?api=1&query=40.4468N,80.0158W')">View Map</button>
+			</div>
+			<!-- generic hidden tab -->
+			<div data-role="collapsible">
+				<h4>Mystery Mayhem Escapes</h4>
+				<p>Want to go to an escape room with a bunch of friends? Well, there is one located right in Slippery Rock! Bring a group of friends and attempt to escape. Can you make it out?</p>
+				<img src="img/mystery-mayhem-escapes.jpg" alt="escapes" style="width:100%;height:100%;"> 
+				<button id="button" onclick="launchMap('https://www.google.com/maps/place/Mystery+Mayhem+Escapes+(Escape+Room)/@41.0487832,-80.0415388,15z/data=!4m5!3m4!1s0x0:0xacb16669f5abef80!8m2!3d41.0487832!4d-80.0415388')">View Map</button>
+			</div>
+						<!-- generic hidden tab -->
+			<div data-role="collapsible">
+				<h4>Bowl-O-Drome</h4>
+				<p>Like bowling? Why don’t you go to Grove City to the Bowl-O-Drome? Great place to go bowling with family and friends!</p>
+				<img src="img/bowl-o-drome.jpg" alt="bowl-o-drome" style="width:100%;height:100%;"> 
+				<button id="button" onclick="launchMap('https://www.google.com/maps/place/Mystery+Mayhem+Escapes+(Escape+Room)/@41.0487832,-80.0415388,15z/data=!4m5!3m4!1s0x0:0xacb16669f5abef80!8m2!3d41.0487832!4d-80.0415388')">View Map</button>
 			</div>
 			
 		</div><!-- /content -->
@@ -237,8 +270,30 @@
 		</div><!-- /header -->
 
 		<div role="main" class="ui-content">
-			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-			<p><a href="#menu">Back to foo</a></p>
+			<!-- generic hidden tab -->
+			<div data-role="collapsible">
+				<h4>Quaker State & Lube</h4>
+				<p>Like wings, or like hot food? You have to try Quaker State and Lube located in the Student Center!
+				<br>Try their triple atomic wings if you really have a taste for heat!</p>
+				 <img src="img/quaker.jpg" alt="Quaker Steak n Lube" style="width:100%;height:100%;"> 
+			</div>
+			
+			<!-- generic hidden tab -->
+			<div data-role="collapsible">
+				<h4>Boozel Dining Hall</h4>
+				<p>Like having a lot of different options while eating? Go no further than Boozel Dining Hall!
+				<br> Choose from salads, pizza, hamburgers, and many different options as Boozel has options for everyone!
+				</p>
+				<img src="img/boozel.jpg" alt="Boozel Dining Hall map" style="width:100%;height:100%;">
+			</div>
+			
+			<!-- generic hidden tab -->
+			<div data-role="collapsible">
+				<h4>Weisenfluh Dining Hall</h4>
+				<p>Tired of Boozel? Want to grab a quick cup of coffee? Go to Weisenfluh!<br>
+				With many different options, you’ll see all your friends as Weisenfluh!</p>
+				<<img src="img/weisenfluh dining hall.jpg" alt="Weisenfluh map" style="width:100%;height:100%;">
+			</div>
 		</div><!-- /content -->
 
 		<div class="ui-title" data-role="footer">
@@ -258,8 +313,32 @@
 		</div><!-- /header -->
 
 		<div role="main" class="ui-content">
-			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-			<p><a href="#menu">Back to foo</a></p>
+			<!-- generic hidden tab -->
+			<div data-role="collapsible">
+				<h4>En Lai</h4>
+				<p>Like to eat Chinese food, or have a big appetite? Look no further than En Lai! 
+				<br>This buffet/ restaurant located in Slippery Rock is located close to campus so you don’t have to go far to fill that Chinese food itch!</p>
+				<p><img src="img/en lai.jpg" alt="En Lai" style="width:100%;height:100%;"></p>
+				<button id="button" onclick="launchMap('https://www.google.com/maps/place/En+Lai/@41.0638944,-80.0577107,15z/data=!4m2!3m1!1s0x0:0x4a1194d98150cb55?ved=2ahUKEwiA6py7ipjfAhVI26QKHXzfDokQ_BIwDHoECAQQCA')">View Map</button>
+			</div>
+			
+			<!-- generic hidden tab -->
+			<div data-role="collapsible">
+				<h4>Sheetz</h4>
+				<p>If you aren’t from PA, you might have never experienced a store such as Sheetz. Any time of night or day 
+				<br>they are ready to serve you made to order food! Stop in today!</p>
+				<p><img src="img/sheetz.jpg" alt="Sheetz" style="width:100%;height:100%;"></p>
+				<button id="button" onclick="launchMap('https://www.google.com/maps/place/Sheetz+%2375/@41.0645377,-80.0565721,15z/data=!4m2!3m1!1s0x0:0x3d46353b3c6c296f?ved=2ahUKEwj4_P7HipjfAhUF26QKHcifD4EQ_BIwCnoECAYQCA')">View Map</button>
+			</div>
+			
+			<!-- generic hidden tab -->
+			<div data-role="collapsible">
+				<h4>Primanti Brothers</h4>
+				<p>If you’re in Pennsylvania you have to try Primanti Brothers! Luckily if you don’t want to go to Pittsburgh, 
+				<br>there is one nearby in Grove City!</p>
+				<p><img src="img/primantibros.png" alt="primantis" style="width:100%;height:100%;"></p>
+				<button id="button" onclick="launchMap('https://www.google.com/maps/place/Primanti+Bros./@41.143001,-80.156645,15z/data=!4m2!3m1!1s0x0:0x7f85bcf6f67de3b8?ved=2ahUKEwje0_rWipjfAhVCKewKHajIAlMQ_BIwCnoECAYQCA')">View Map</button>
+			</div>
 		</div><!-- /content -->
 
 		<div class="ui-title" data-role="footer">
@@ -279,8 +358,49 @@
 		</div><!-- /header -->
 
 		<div role="main" class="ui-content">
-			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-			<p><a href="#menu">Back to foo</a></p>
+
+				<div data-role="collapsible">
+				<h4>Living Treasures Wild Animal Park</h4>
+				<p>What’s better than visiting the zoo? Living Treasures is located in New Castle, PA, and with over 400 animals of 70 different species, there is a wonderful environment for everyone!</p>
+				<img src="img/living treasures.jpg" alt="" style="width:100%;height:100%;"> 	
+				<button id="button" onclick="launchMap('https://www.google.com/maps/place/Primanti+Bros./@41.143001,-80.156645,15z/data=!4m2!3m1!1s0x0:0x7f85bcf6f67de3b8?ved=2ahUKEwje0_rWipjfAhVCKewKHajIAlMQ_BIwCnoECAYQCA')">Launch Map</button>
+				
+			</div>
+					<div data-role="collapsible">
+				<h4>McConnells Mill State Park</h4>
+				<p>Want to visit one of Pennsylvania’s must see state parks? Visit McConnells Mill! The scenic gorge, watermill, and covered bridge set in the middle of the wilderness makes this one of the most exciting places to visit in Pennsylvania.</p>
+				<img src="img/McConnells Mill.jfif" alt="" style="width:100%;height:100%;"> 	
+				<button id="button" onclick="launchMap('https://www.google.com/maps/place/Primanti+Bros./@41.143001,-80.156645,15z/data=!4m2!3m1!1s0x0:0x7f85bcf6f67de3b8?ved=2ahUKEwje0_rWipjfAhVCKewKHajIAlMQ_BIwCnoECAYQCA')">Launch Map</button>
+				
+			</div>
+					<div data-role="collapsible">
+				<h4>Freedom Falls and Rockland Furnace</h4>
+				<p>Freedom falls is one of the most beautiful waterfalls in Western Pennsylvania. Don’t like the water? Visit the Rockland furnace or the Rockland Tunnel. There is something for everyone at Freedom Falls.</p>
+				<img src="img/freedom falls.jpg" alt="" style="width:100%;height:100%;"> 	
+				<button id="button" onclick="launchMap('https://www.google.com/maps/place/Freedom+Falls/@41.2359853,-79.748407,15z/data=!4m2!3m1!1s0x0:0x57484dc542720cc8?ved=2ahUKEwiXn6ODi5jfAhWECuwKHTNrAzoQ_BIwEnoECAYQCA')">Launch Map</button>
+				
+			</div>
+					<div data-role="collapsible">
+				<h4>Old Thompson Field</h4>
+				<p>Want a big wide open space to play with friends or to run around? Look no further than Old Thompson Field, which used to be where the football games were played until 1974.</p>
+				<img src="img/thompson.jpg" alt="" style="width:100%;height:100%;"> 	
+				
+				
+			</div>
+					<div data-role="collapsible">
+				<h4>Wally Rose Field</h4>
+				<p>Not a fan of Old Thompson Field and want somewhere to go play with friends? Go to Wally Rose Field. Big open field to run around and do whatever with your friends!</p>
+				<img src="img/wally rose.jpg" alt="" style="width:100%;height:100%;"> 	
+			
+				
+			</div>
+					<div data-role="collapsible">
+				<h4>SRU Alumni Pavilion</h4>
+				<p>Want somewhere to go with your friends outside, but it’s raining? Go to the SRU Alumni Pavilion! Enjoy the great outdoors, but have something over your head so you don’t have to enjoy the rain or snow!</p>
+				<img src="img/pavilion.jpg" alt="" style="width:100%;height:100%;"> 	
+			
+				
+			</div>
 		</div><!-- /content -->
 
 		<div class="ui-title" data-role="footer">
@@ -300,8 +420,26 @@
 		</div><!-- /header -->
 
 		<div role="main" class="ui-content">
-			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-			<p><a href="#menu">Back to foo</a></p>
+			<div data-role="collapsible">
+				<h4>Grove City Outlets</h4>
+				<p>Want to go to the mall, but don’t want to travel far? Lucky for you, the Grove City outlets is located right along Interstate 79 in Grove City. With stores such as Starbucks, Nike, and American Eagle, there is something for everyone!</p>
+				<img src="img/grove-city-premium-outlets.jpg" alt="" style="width:100%;height:100%;"> 	
+				<button id="button" onclick="launchMap('https://www.google.com/maps/place/Freedom+Falls/@41.2359853,-79.748407,15z/data=!4m2!3m1!1s0x0:0x57484dc542720cc8?ved=2ahUKEwiXn6ODi5jfAhWECuwKHTNrAzoQ_BIwEnoECAYQCA')">Launch Map</button>
+			</div>
+			
+			<div data-role="collapsible">
+				<h4>Aldi’s</h4>
+				<p>All the students at SRU know the struggle of going to college and not being able to afford much. That’s why stores such as Aldi’s are so great! With insanely cheap groceries, Aldi’s in Grove City is a must for all who visit Slippery Rock.</p>
+				<img src="img/aldis.jpg" alt="" style="width:100%;height:100%;"> 	
+				<button id="button" onclick="launchMap('https://www.google.com/maps/place/ALDI/@41.166605,-80.110472,15z/data=!4m2!3m1!1s0x0:0xedeec146d04d2c73?ved=2ahUKEwjwm-qri5jfAhUCqaQKHVF-A3wQ_BIwCnoECAMQCA')">Launch Map</button>
+			</div>
+			
+			<div data-role="collapsible">
+				<h4>Tinker’s Dam</h4>
+				<p>Need flowers for that special man or lady in your life? Lucky for you, there’s a great little flower shop located right in Slippery Rock! Whether you need a couple flowers or a large number of flowers for an event, Tinker’s Dam will give you what you need.</p>
+				<img src="img/tinkers-dam.jpg" alt="" style="width:100%;height:100%;"> 	
+				<button id="button" onclick="launchMap('https://www.google.com/maps/place/Tinker's+Dam+Florist+%26+Gifts/@41.0642593,-80.0558951,15z/data=!4m2!3m1!1s0x0:0x69249ebb6e8cef90?ved=2ahUKEwj0t5m2i5jfAhXRKewKHX5rD4MQ_BIwCnoECAMQCA')">Launch Map</button>
+			</div>
 		</div><!-- /content -->
 
 		<div data-role="footer">
@@ -321,13 +459,31 @@
 		</div><!-- /header -->
 
 		<div role="main" class="ui-content">
-			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-			<p><a href="#menu">Back to foo</a></p>
+			<div data-role="collapsible">
+				<h4>Old Stone House</h4>
+				<p>Like history, or viewing how people lived years ago? Look no further than the Old Stone House. Located right down the street from SRU, the historic landmark gives visitors a glimpse into the past, at what life used to be like before smart phones and Juuls….</p>
+				<img src="img/old stone house.jpg" alt="" style="width:100%;height:100%;"> 	
+				<button id="button" onclick="launchMap('https://www.google.com/maps/place/Old+Stone+House/@41.0116234,-80.0021076,15z/data=!4m2!3m1!1s0x0:0x3dc41319f55b3b09?ved=2ahUKEwiZ5evGi5jfAhUL3qQKHfMFAyEQ_BIwDnoECAYQCA')">Launch Map</button>
+			</div>
+						<div data-role="collapsible">
+				<h4>Moraine State Park</h4>
+				<p>Like being near the water? How about taking a visit down to Moraine State park? With a 3,225-acre lake, there is no shortage of water for visitors. Also, the large number of trails makes sure that everyone in the family has something to do.</p>
+				<img src="img/moraine.jpg" alt="" style="width:100%;height:100%;"> 	
+				<button id="button" onclick="launchMap('https://www.google.com/maps/place/Moraine+State+Park/@40.9390848,-80.0971148,15z/data=!4m2!3m1!1s0x0:0x80939e3525a38c17?ved=2ahUKEwiDhM7Vi5jfAhWHsaQKHR1aBIUQ_BIwEnoECAUQCA')">Launch Map</button>
+			</div>
+						<div data-role="collapsible">
+				<h4>Iron Mountain</h4>
+				<p>Inside the little town of Boyers, PA lives a little secret…. Known as Iron Mountain. Tons of classified information is stored beneath the Earth in a highly secured environment. Celebrities such as Ozzy Osbourne and Slash have been known to be seen down in Iron Mountain. Stop by, you never know what you might see!</p>
+				<img src="img/iron mountain.jpg" alt="" style="width:100%;height:100%;"> 	
+				<button id="button" onclick="launchMap('https://www.google.com/maps/place/Iron+Mountain+Boyers,+PA/@41.1441186,-79.8632832,10z/data=!4m2!3m1!1s0x0:0xb675557e701bae75?ved=2ahUKEwik5efmi5jfAhWLCuwKHQm6A9wQ_BIwFHoECAQQBg')">Launch Map</button>
+			</div>
 		</div><!-- /content -->
 
 		<div data-role="footer">
 			<h4></h4>
 		</div><!-- /footer -->
 	</div><!-- /page -->
+	
+
 </body>	
 </html>
